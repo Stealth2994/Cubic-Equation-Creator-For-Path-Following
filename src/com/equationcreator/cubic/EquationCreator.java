@@ -7,7 +7,7 @@ public class EquationCreator {
 	public static CubicEquation MakeCubicEquation(double x, double y, double theta) {
 		Coordinates c = new Coordinates(x,y);
 		c.rotateRight();
-		double tangent = -Math.tan(theta);
+		double tangent = Math.tan(Math.toRadians(360 - theta));
 		double eq1a = Math.pow(c.x, 3);
 		double eq1b = Math.pow(c.x, 2);
 		double eq1y = c.y;
